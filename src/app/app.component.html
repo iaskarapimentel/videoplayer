@@ -1,2 +1,4 @@
-<app-search-bar></app-search-bar>
-<app-video-view></app-video-view>
+<app-search-bar (urlEvent)="receiveUrl($event)"></app-search-bar>
+<!-- Envelope Vazio -->
+<app-video-view [currentUrl]="currentUrl"></app-video-view>
+<app-history-list></app-history-list>

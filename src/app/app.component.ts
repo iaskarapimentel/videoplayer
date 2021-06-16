@@ -5,4 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: ('app.component.html')
 })
 export class AppComponent {
+
+  currentUrl: string = "";
+
+  receiveUrl($event: string) {
+    this.currentUrl = $event;
+  }
 }

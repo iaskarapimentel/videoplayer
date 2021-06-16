@@ -1,0 +1,8 @@
+mat-card {
+  display: flex;
+  align-items: normal;
+  justify-content: left;
+  width: 60%;
+  border: 1px solid #bdbdbd;
+  margin: 50px;
+}
