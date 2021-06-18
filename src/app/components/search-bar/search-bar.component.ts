@@ -8,7 +8,7 @@ import { VideoplayerService } from '../service/videoplayer.service';
 })
 export class SearchBarComponent implements OnInit {
 
-  url: string = ' ';
+  url: string = '';
   
   constructor(private videoplayerService: VideoplayerService) { }
 
@@ -16,7 +16,9 @@ export class SearchBarComponent implements OnInit {
   }
 
   getURL() {
-    const videoId = this.url.split('?v=')[1].split('&')[0];
-    this.videoplayerService.setUrl(videoId, 'history');
+    if(this.url !== '') {
+      const videoId = this.url.split('?v=')[1].split('&')[0];
+      this.videoplayerService.setUrl(videoId, 'history');
+    }
   }
 }
