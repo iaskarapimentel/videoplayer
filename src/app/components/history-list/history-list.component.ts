@@ -14,15 +14,25 @@ export class HistoryListComponent implements OnInit {
   constructor(private videoplayerService: VideoplayerService) { }
 
   ngOnInit(): void {
+    this.updateList();  
     this.videoplayerService.videoId.subscribe((videoId) =>  {
-      if( videoId !== '') {
-        this.listUrl.push(this.videoRoot + videoId);
-      } 
-    }); 
+    this.updateList();      
+    });
   }
 
-  getURL(url:String) {
+  updateList() {
+    let archive = [],
+    keys = Object.keys(localStorage),
+    i = 0, key;
+    for (; key = keys[i]; i++) {
+      const video = localStorage.getItem(key)
+      archive.push(JSON.parse(video || '{}'));
+    }
+    this.listUrl = archive.filter(item => item.type === 'history').map(x =>   this.videoRoot + x.id) 
+  }
+
+  setFromHistory(url:String) {
     const videoId = url.split('embed/')[1];
-    this.videoplayerService.setUrl(videoId);
+    this.videoplayerService.setUrl(videoId.toString(), 'history');
   }
 }

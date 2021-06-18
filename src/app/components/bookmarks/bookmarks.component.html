@@ -1,0 +1,14 @@
+<mat-sidenav class="bookmark" opened mode="side" position="end" fixedInViewport="true" fixedTopGap="65">
+  <ul>
+    <li>
+      <a class="btn" (click)=addToBookmark()>
+        <i class="material-icons">star</i>  
+        Add To Bookmarks</a>
+    </li>
+  </ul>
+  <ul *ngFor='let itemUrl of listUrl'>
+    <li>{{ itemUrl }}</li>
+  </ul>
+</mat-sidenav>
+  
+

@@ -17,8 +17,14 @@ export class VideoplayerService {
   constructor( private _sanitizer: DomSanitizer) {   
   }
 
-  setUrl(urlId: string) {
+  setUrl(urlId: string, type: string) {
     this.url.next(this._sanitizer.bypassSecurityTrustResourceUrl("//www.youtube.com/embed/" + urlId));
+    var now = new Date().toLocaleString();
+    const video = {
+      id: urlId,
+      type: type,
+    } 
+    localStorage.setItem(now.toString(), JSON.stringify(video));
     this.Id.next(urlId);
   }
 }

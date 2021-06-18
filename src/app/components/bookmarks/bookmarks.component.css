@@ -1,0 +1,38 @@
+a {
+ text-align: center;
+}
+
+ul {
+  line-height: 2;
+}
+
+li {
+  text-align: center;
+}
+
+.bookmark {
+  min-width: 23%;
+  border: 1px solid #dad8d8;
+  border-radius: 10px;
+  margin: 57px 15px 20px;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  border-bottom: 1px solid #dad8d8;
+  color: #344462;
+  background: #fff;
+  padding: 20px 30px;
+  width: 100%;
+  font-weight: 100;
+  font-size: 28px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.mat-sidenav:hover {
+border: 2px solid #000;
+}
