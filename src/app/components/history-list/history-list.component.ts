@@ -31,11 +31,6 @@ export class HistoryListComponent implements OnInit {
     this.listUrl = archive.filter(item => item.type === 'history').map(x =>   this.videoRoot + x.id) 
   }
 
-  getURL(url:String) {
-    const videoId = url.split('embed/')[1];
-    this.videoplayerService.setUrl(videoId, 'history');
-  }
-
   setFromHistory(url:String) {
     const videoId = url.split('embed/')[1];
     this.videoplayerService.setUrl(videoId.toString(), 'history');

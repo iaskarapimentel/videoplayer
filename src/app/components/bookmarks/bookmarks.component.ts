@@ -18,8 +18,7 @@ export class BookmarksComponent implements OnInit {
   ngOnInit(): void {
     this.updateList();
     this.videoplayerService.videoId.subscribe((videoId) =>  {
-      // this.updateList();    
-      if( videoId !== '') {
+      if(videoId !== '') {
         this.currentUrl = this.videoRoot + videoId;
       } 
     }); 

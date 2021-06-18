@@ -27,7 +27,6 @@ li {
   width: 100%;
   font-weight: 100;
   font-size: 28px;
-  color: #344462;
 }
 
 .btn:hover {
@@ -36,5 +35,4 @@ li {
 
 .mat-sidenav:hover {
 border: 2px solid #000;
-color: #344462;
 }
