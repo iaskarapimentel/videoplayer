@@ -1,10 +1,14 @@
 <div>
   <mat-form-field id="form" class="form-field" appearance="outline">
-    <mat-label>Play Video</mat-label>
-    <input id="url" name="url" [(ngModel)]="url" matInput placeholder="insira o link" >
+      <mat-label>Play Video</mat-label>
+      <input id="url" name="url" [(ngModel)]="url" matInput placeholder="insira o link" >
   </mat-form-field>
-  <button mat-stroked-button class="btn" color="primary" type="button" (click)=getURL()>Play</button>
+  <button class="btn" (click)=getURL()>Play</button>
+
 </div>
+<!-- type="button"  -->
+<!-- mat-stroked-button -->
+
 
 
 

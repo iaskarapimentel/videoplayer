@@ -9,12 +9,20 @@ import { VideoplayerService } from '../service/videoplayer.service';
 export class HistoryListComponent implements OnInit {
 
   listUrl: String[] = [];
+  videoRoot: String = 'https://www.youtube.com/embed/'
 
   constructor(private videoplayerService: VideoplayerService) { }
 
   ngOnInit(): void {
-    this.videoplayerService.safeUrl.subscribe((safeUrl) => 
-    (this.listUrl.push(safeUrl.toString())));
+    this.videoplayerService.videoId.subscribe((videoId) =>  {
+      if( videoId !== '') {
+        this.listUrl.push(this.videoRoot + videoId);
+      } 
+    }); 
   }
 
+  getURL(url:String) {
+    const videoId = url.split('embed/')[1];
+    this.videoplayerService.setUrl(videoId);
+  }
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VideoplayerService } from '../service/videoplayer.service';
 
-
 @Component({
   selector: 'app-search-bar',
   templateUrl: './search-bar.component.html',
