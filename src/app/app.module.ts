@@ -7,6 +7,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VideoViewComponent } from './components/video-view/video-view.component';
 import { HistoryListComponent } from './components/history-list/history-list.component';
+import { BookmarksComponent } from './components/bookmarks/bookmarks.component';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
@@ -16,12 +17,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
     VideoViewComponent,
-    HistoryListComponent
+    HistoryListComponent,
+    BookmarksComponent,
   ],
   imports: [
     BrowserModule,

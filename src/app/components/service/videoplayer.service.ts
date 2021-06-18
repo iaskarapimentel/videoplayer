@@ -14,6 +14,9 @@ export class VideoplayerService {
   public Id = new BehaviorSubject<string>('');
   videoId = this.Id.asObservable();
 
+  // public history = new BehaviorSubject<Storage>(localStorage);
+  // historyList = this.history.asObservable();
+
   constructor( private _sanitizer: DomSanitizer) {   
   }
 

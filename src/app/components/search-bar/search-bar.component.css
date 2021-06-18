@@ -1,11 +1,11 @@
 div {
   display: flex;
-  justify-content: center;
+  margin-left: 10px;
 }
 
 .form-field {
   margin-top: 30px;
-  min-width: 40%;
+  min-width: 70%;
 }
 
 .btn {
