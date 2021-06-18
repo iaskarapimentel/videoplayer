@@ -6,7 +6,7 @@
     </h2>
     <ul class="list">
       <li *ngFor='let itemUrl of listUrl'>
-        <a (click)=getURL(itemUrl)>{{ itemUrl }}</a>
+        <a (click)=setFromHistory(itemUrl)>{{ itemUrl }}</a>
       </li>
     </ul>
   </mat-sidenav>

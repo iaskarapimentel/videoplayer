@@ -1,6 +1,15 @@
 a {
  text-align: center;
 }
+
+ul {
+  line-height: 2;
+}
+
+li {
+  text-align: center;
+}
+
 .bookmark {
   min-width: 23%;
   border: 1px solid #dad8d8;
@@ -11,6 +20,7 @@ a {
 .btn {
   cursor: pointer;
   display: inline-block;
+  border-bottom: 1px solid #dad8d8;
   color: #344462;
   background: #fff;
   padding: 20px 30px;
@@ -22,7 +32,6 @@ a {
 
 .btn:hover {
   cursor: pointer;
-  border-bottom: 1px solid #dad8d8;
 }
 
 .mat-sidenav:hover {

@@ -17,6 +17,6 @@ export class SearchBarComponent implements OnInit {
 
   getURL() {
     const videoId = this.url.split('?v=')[1].split('&')[0];
-    this.videoplayerService.setUrl(videoId);
+    this.videoplayerService.setUrl(videoId, 'history');
   }
 }

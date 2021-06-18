@@ -25,6 +25,11 @@ export class BookmarksComponent implements OnInit {
 
   addToBookmark() {
     this.listUrl.push(this.currentUrl)
-    console.log(this.listUrl)
+    var now = new Date().toLocaleString();
+    const video = {
+      id: this.currentUrl,
+      type: 'bookmark',
+    }
+    localStorage.setItem(now.toString(), JSON.stringify(video));
   }
 }
